@@ -1,0 +1,36 @@
+@use "./variables";
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto; 
+  padding: 15px 20px;
+}
+
+/* Style du Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    a {
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+}
+
+/* Style du Footer */
+footer {
+  height: 209px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
