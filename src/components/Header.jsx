@@ -1,16 +1,16 @@
+import { NavLink } from "react-router-dom";
 import logoHeader from "../assets/Logo_header_desktop.svg";
 
 function Header() {
-    return (
-      <header>
-        <img src={logoHeader} alt="Logo Kasa" />
-        <nav>
-          <a href="/">Accueil</a>
-          <a href="/about">À propos</a>
-        </nav>
-      </header>
-    );
-  }
-  
-  export default Header;
-  
+  return (
+    <header>
+      <img src={logoHeader} alt="Logo Kasa" />
+      <nav>
+        <NavLink to="/" className={({ isActive }) => isActive ? "active-link" : ""}>Accueil</NavLink>
+        <NavLink to="/about" className={({ isActive }) => isActive ? "active-link" : ""}>À propos</NavLink>
+      </nav>
+    </header>
+  );
+}
+
+export default Header;

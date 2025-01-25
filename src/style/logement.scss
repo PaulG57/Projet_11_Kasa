@@ -1,0 +1,149 @@
+/********** Logement *********/
+.logement {
+
+  .slideshow {
+    position: relative;
+  
+    .slide {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 50px;
+      cursor: pointer;
+    }
+    
+    .left {
+      left: 15px;
+    }
+    
+    .right {
+      right: 15px;
+    }
+    
+    .counter {
+      position: absolute;
+      bottom: 10px;
+      right: 50%;
+      color: white;
+    }
+  }
+
+  .logement-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+
+    .logement-title {
+      display: flex;
+      flex-direction: column;
+
+      h1 {
+        margin: 0;
+        color: #FF6060;
+      }
+      p {
+        margin: 0;
+        padding: 5px 0;
+      }
+
+      .tags {
+        display: flex;
+        gap: 10px;
+        margin: 15px 0;
+
+        span {
+          background-color: #ff6060;
+          color: white;
+          padding: 5px 10px;
+          border-radius: 25px;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .host-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .host {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        span {
+          width: 75px;
+          text-align: end;
+          color: #FF6060;
+        }
+
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+      .rating {
+        display: flex;
+        gap: 5px;
+    
+        span {
+          font-size: 30px;
+          color: #E3E3E3;
+    
+          &.filled {
+            color: #FF6060;
+          }
+        }
+      }
+    }
+  }
+
+  .logement-collapse {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+
+    .collapse {
+      width: 45%;
+      margin: 0;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+
+    .slideshow {
+      .slide {
+        height: 255px;
+      }
+    }
+    .logement-header {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .host-info {
+        width: 100%;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      }
+    }
+    .logement-collapse {
+      flex-direction: column;
+      gap: 20px;
+      .collapse {
+        width: 100%;
+      }
+    }
+  }
+
+}

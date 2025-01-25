@@ -1,0 +1,50 @@
+/********* About *********/
+.collapse {
+    margin: 20px auto;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 85%;
+
+    .collapse-header {
+      height: 52px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #FF6060;
+      color: white;
+      padding: 0 15px;
+      cursor: pointer;
+    }
+    
+    .arrow {
+      transition: transform 0.3s ease-in-out;
+      font-size: 2rem;
+    }
+    
+    .arrow.up {
+      transform: rotate(180deg);
+    }
+    
+    .collapse-content {
+      background-color: #F6F6F6;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, padding 0.3s ease-in-out;
+      opacity: 0;
+      padding: 0 20px;
+    }
+    
+    .collapse-content.open {
+      max-height: 200px;
+      opacity: 1;
+      padding: 10px 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+
+      .collapse-header {
+        height: 35px;
+      }
+    }
+  }
