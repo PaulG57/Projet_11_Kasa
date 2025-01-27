@@ -34,9 +34,9 @@
     }
 
     @media screen and (max-width: 768px) {
-      grid: none;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 20px;
-      margin: auto;
+      padding: 0;
       background-color: white;
 
       .card {
