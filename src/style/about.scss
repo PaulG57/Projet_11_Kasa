@@ -1,7 +1,7 @@
 /********* About *********/
 .collapse {
     margin: 20px auto;
-    border-radius: 5px;
+    border-radius: 12px;
     overflow: hidden;
     width: 85%;
 
@@ -19,10 +19,11 @@
     .arrow {
       transition: transform 0.3s ease-in-out;
       font-size: 2rem;
+      transform: rotate(180deg);
     }
     
     .arrow.up {
-      transform: rotate(180deg);
+      transform: rotate(0deg);
     }
     
     .collapse-content {

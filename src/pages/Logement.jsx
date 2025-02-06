@@ -1,6 +1,8 @@
 import { Navigate, useParams } from "react-router-dom";
 import logements from "../data/logements.json";
 import Slideshow from "../components/Slideshow";
+import Tags from "../components/Tags";
+import Rating from "../components/Rating";
 import Collapse from "../components/Collapse";
 
 function Logement() {
@@ -21,9 +23,7 @@ function Logement() {
         <div className="logement-title">
           <h1>{logement.title}</h1>
           <p>{logement.location}</p>
-          <div className="tags">
-              {logement.tags.map((tag, index) => <span key={index}>{tag}</span>)}
-          </div>
+          <Tags tags={logement.tags} />
         </div>
 
         <div className="host-info">
@@ -33,11 +33,7 @@ function Logement() {
             <img src={logement.host.picture} alt={logement.host.name} />
           </div>
 
-          <div className="rating">
-            {[...Array(5)].map((_, index) => (
-              <span key={index} className={index < logement.rating ? "filled" : ""}>★</span>
-            ))}
-          </div>
+          <Rating rating={logement.rating} />
           
         </div>
 
